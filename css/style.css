@@ -1,0 +1,46 @@
+@import url(reset.css);
+@import url(normalize.css);
+
+header .nav{
+    color:#F5F5F5;
+    display:absolute;
+    left:0;
+    top:0;
+}
+header .nav .main{
+    color:#F5F5F5;
+    display:relative;
+    background-image: url(img/);
+
+}
+
+header .nav .main .desc{
+    display:block;
+    transform: 1227px, 511px;
+}
+
+header .nav ul{
+    display: flex;
+}
+
+header .nav .sns{
+    display: flex;
+}
+
+
+
+.eventbox{
+    width:442px;
+    height:650px;
+    border-radius: 10px;
+    background: yellow;
+}
+
+footer .sitemap ul{
+    display: flex;
+    align-items: center;
+
+}
+footer .copyright{
+    text-align:center;
+}
