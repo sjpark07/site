@@ -1,5 +1,10 @@
 @import url(reset.css);
 @import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+font-family: "Libre Caslon Text", serif;
+font-weight: 700;
+font-style: normal;
 
 header .nav{
     color:#F5F5F5;
@@ -43,4 +48,18 @@ footer .sitemap ul{
 }
 footer .copyright{
     text-align:center;
+}
+
+header {
+    position:relative;
+}
+
+.content .bg{
+    background-image: url("../img/main_fixed_bg.png");
+    position: absolute;
+    width : 1920px;
+    height: 1080px;
+    
+
+
 }
