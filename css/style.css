@@ -2,9 +2,19 @@
 @import url(normalize.css);
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-font-family: "Libre Caslon Text", serif;
-font-weight: 700;
-font-style: normal;
+:root{
+    --main-color:#292626;
+    --sub-color:#5C4949;
+    --back-color1:#F9E6CB;
+    --back-color2:#FEF7E7;
+    --back-color3:#F5F5F5;
+    --point-color_1:#8E8910;
+    --point-color_2:#F9FFB7;
+    font-family: "Kalam", san-serif;
+    font-family: "Roboto", serif;
+    font-family: "libre Caslon text", san-serif;
+}
+
 
 header .nav{
     color:#F5F5F5;
@@ -14,14 +24,19 @@ header .nav{
 header .nav .main{
     color:#F5F5F5;
     display:fixed;
-    background-image: url(img/);
-
+    
 }
+
+
 
 header .nav .main .desc{
     display:block;
     transform: 1227px, 511px;
-    font-size: 48px;
+    font-family: "Kalam", serif;
+    font-style:bold;
+    font-size: 25px;
+    width: 627px;
+    height: 77px;
 }
 
 header .nav ul, header .nav .sns{
@@ -32,8 +47,8 @@ header .nav ul, header .nav .sns{
 .eventbox{
     width:442px;
     height:650px;
-    border-radius: 10px;
-    background: yellow;
+    border-radius: 20px;
+    background: var(--point-color_2);
 }
 
 footer .sitemap ul{
@@ -48,9 +63,9 @@ footer .copyright{
 header {
     position:relative;
     background-image: url("../img/main_fixed_bg.png");
-    width : 1920px;
+    width : 100%;
     height: 1080px;
-    object-fit: 100%;
+    object-fit: cover;
 }
 
 .nav {
@@ -60,12 +75,7 @@ header {
     align-items: center;
     
 }
-.nav .menu:hover{
-    background-color: #000;
-    opacity: .1    ;
 
-    
-}
 .nav .menu li{
     justify-content: space-between;
     background-color: transparent;
@@ -91,8 +101,14 @@ header {
 
 .content .desc {
     position:absolute;
-    right: 700px;
-    bottom: 700px;
+    left: 1227px;
+    top: 511px;
+    display:block;
+    font-family: "Roboto", serif;
+    font-style:bold;
+    font-size: 25px;
+    width: 627px;
+    height: 77px;
 }
 
 .event{
@@ -100,4 +116,32 @@ header {
 }
 h2 {
     padding: 10px;
+}
+
+.logo_img{
+    display:block;
+    background-image: url('../img/dessert39_logo2_gra_2.png');
+    width: 112px;
+    height: 137.5px;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.nav{
+    width:100%;
+}
+
+.menu{
+    margin: 0 266px;
+}
+
+h2{
+    text-align: center;
+    font-family: "Kalam", serif;
+    font-style:bold;
+    font-size: 40px;
+}
+
+footer .sitemap{
+    display: flex;
+    justify-content: center;
 }
