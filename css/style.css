@@ -18,7 +18,7 @@
 main{
     margin: auto 5%;
     background-color: var(--back-color2);
-    border-style: dashed;
+    border-style: none dashed none;
     box-sizing: border-box;
     text-align: center;
     border-color:#000;
@@ -58,7 +58,7 @@ main .fix_img.img3{
 }
 main .fix_img.img4{
     position:absolute;
-    transform: translate(-80px, 3583px) rotate(-5.17deg) scaleX(-1);
+    transform: translate(-80px, 3083px) rotate(-5.17deg) scaleX(-1);
     object-fit: cover;
 }
 
@@ -265,13 +265,14 @@ main .fix_img.img4{
     width: 100%;
 }
 
-.recom_menu .beverage .ds_menu{
+.recom_menu .beverage .be_menu{
     width: 500px;
+    height: 500px;
     box-sizing: border-box;
     display: flex;
 }
 
-.recom_menu .beverage .ds_menu .ds_menu_s{
+.recom_menu .beverage .be_menu .be_menu_s{
     width: 150px;
     height: 150px;
     display: flex;
@@ -286,6 +287,21 @@ main .fix_img.img4{
     display:none;
     }
 
+    .recom_menu .dessert .ds_menu{
+        width: 500px;
+        height: 500px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .recom_menu .dessert .ds_menu .ds_menu_s{
+        width: 150px;
+        height: 150px;
+        display: flex;
+        white-space: nowrap;
+        margin: auto;
+        background-color: #000;  
+    }  
 /*FRANCHISE*/
 
 
