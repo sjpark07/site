@@ -14,17 +14,28 @@
     --font-libre: "libre Caslon text", san-serif;
     --font-noto: "Noto Sans KR", sans-serif;
 }
-
+body {overflow-x: hidden;
+        overflow-y:scroll;}
 main{
-    margin: auto 5%;
+    margin: auto 5% ;
     background-color: var(--back-color2);
-    border-style: none dashed none;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='2' stroke-dasharray='2%2c4%2c6%2c8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     box-sizing: border-box;
     text-align: center;
     border-color:#000;
     position:relative;
+}
 
-}main h2 {
+.event h2:first-child {
+    text-align: center;
+    font-family: var(--font-noto);
+    font-weight:bold;
+    font-size: 32px;
+    display:block;
+    margin: auto 25px;
+    width: 100%;
+}
+/* main h2 {
     text-align: center;
     font-family: var(--font-noto);
     font-weight:bold;
@@ -32,7 +43,7 @@ main{
     display:block;
     margin: 150px auto 25px;
     width: 100%;
-}
+} */
 
 
 
@@ -65,42 +76,43 @@ main .fix_img.img4{
 
 /*HEADER*/
 
+
+
 .nav {
     width:100%;
     position: fixed;
     display:flex;
     justify-content: start;
     align-items: center;
-    margin: 10px;
     z-index: +5;
     flex-wrap: nowrap;
     
 }
 
-.nav .menu{
+.nav > .menu{
+    width:100%;
     display: flex;
+    justify-content: center;
+    gap: 80px;
     margin: auto;
     font-weight: bold;
-    gap: 50px;
     font-size:25px;
-    color: var(#F5F5F5);
     transition:height 0.5s;
-    background:linear-gradient(transparent 35px, rgba(255,255,255,0.5) 50px, rgba(255,255,255,0.5) );
+    background:linear-gradient(transparent);
 }
-.nav .menu li{
-    justify-content: space-between;
+header .nav .menu *{
     background-color: transparent;
-    font-weight: medium;
     text-decoration: none;
-    color: var(#F5F5F5);
+    color: #F5F5F5;
     
 }
-/* .nav .menu li .menu_s li{
-    display: none;
+header .nav .menu > li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 50px;
+    
 }
-.nav .menu_s:hover, .menu_s li{
-    display: block;
-} */
 
 .nav .menu li, .nav .menu li .menu_s{
     flex-direction:column;
@@ -108,8 +120,16 @@ main .fix_img.img4{
     align-items: center;
     text-align: center;
 }
+
+.nav .menu li .menu_s{
+    font-size: 22px;
+}
 .nav .sns{
     display: flex;
+}
+
+.nav .menu > .sns > li > a > i *{
+    font-size: 100px;
 }
 
 .content.bg {
@@ -121,22 +141,32 @@ main .fix_img.img4{
     z-index: -1;
 }
 /*LOGO_IMG & DESC*/
-.logo_img{
+h1 a{
     display: block;
-    background-image: url("../img/dessert39_logo2_gra_2.png");
+    background-image: url("../img/dessert39_logo2_gra.png");
     width: 112px;
     height: 137.5px;
     text-indent: -9999em;
     overflow: hidden;
-}
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    0%{
+        scale: 2000%;
+    }
+    100%{
+        scale: 100%;
+    }
+  }
 
-
-.content .bg{
+.content.bg{
     position:relative;
 
 }
 
-.content .desc {
+.content.desc {
     position:absolute;
     left: 1227px;
     top: 600px;
@@ -147,11 +177,26 @@ main .fix_img.img4{
     font-size: 25px;
     width: 627px;
     height: 77px;
+    animation-duration: 1s;
+    animation-name: slidein_2;
+  }
+/* 
+  @keyframes slidein_2 {
+    from {
+      margin-left: 10%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  } */
+  
+.fixed {
+    position: fixed;
+    background:linear-gradient(transparent, rgba(255,255,255,0.5) 50px, rgba(255,255,255,0.5) );
 }
-
-
-
-
 /* EVENT & NEWS */
 
 
@@ -162,8 +207,8 @@ main .fix_img.img4{
 } */
 
 .eventbox{
-    width:442px;
-    height:700px;
+    width:392px;
+    height:650px;
     border-radius: 20px;
     background: var(--point-color_2);
     margin: 26px 13px 26px;
@@ -183,7 +228,7 @@ main .fix_img.img4{
 .eventbox img{
     display:flex;
     width: 100%;
-    height:650px;
+    height:600px;
     border-radius: 20px;
     flex-wrap: nowrap;
     text-transform: inherit;
@@ -219,8 +264,8 @@ main .fix_img.img4{
     justify-content: center;
 }
 .recom_menu .beverage .be{
-    width:394px;
-    height:526px;
+    width:284px;
+    height:416px;
     border-radius: 20px;
     margin: 26px 13px 26px;
     font-family: var(--font-noto);
@@ -236,8 +281,8 @@ main .fix_img.img4{
 }
 
 .recom_menu .beverage .be_menu .be_menu_s{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: flex;
     margin: auto;
     background-color: #000;
@@ -249,9 +294,9 @@ main .fix_img.img4{
     align-items: center;
     justify-content: center;
 }
-.recom_menu .dessert .ds{
-    width:394px;
-    height:526px;
+.recom_menu .dessert .ds a{
+    width:284px;
+    height:416px;
     border-radius: 20px;
     margin: 26px 13px 26px;
     font-family: var(--font-noto);
@@ -273,8 +318,8 @@ main .fix_img.img4{
 }
 
 .recom_menu .beverage .be_menu .be_menu_s{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: flex;
     white-space: nowrap;
     margin: auto;
@@ -287,7 +332,7 @@ main .fix_img.img4{
     display:none;
     }
 
-    .recom_menu .dessert .ds_menu{
+.recom_menu .dessert .ds_menu{
         width: 500px;
         height: 500px;
         box-sizing: border-box;
@@ -295,8 +340,8 @@ main .fix_img.img4{
         flex-wrap: nowrap;
     }
     .recom_menu .dessert .ds_menu .ds_menu_s{
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         display: flex;
         white-space: nowrap;
         margin: auto;

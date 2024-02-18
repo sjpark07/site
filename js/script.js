@@ -1,12 +1,12 @@
 //header - nav menu
-const mainMenu = document.querySelectorAll('.menu li');
-const header = document.querySelector('.menu');
+const mainMenu = document.querySelectorAll('.menu');
+const header = document.querySelector('.nav > .menu');
 const initHeight = header.offsetHeight;
 let tallestHeight = 0;
 
 for(let mm of mainMenu){
 	//서브메뉴의 높이구하기
-	let smHeight = mm.querySelectorAll('ul').offsetHeight;	
+	let smHeight = mm.querySelectorAll('.menu_s').offsetHeight;	
 
 	if(smHeight > tallestHeight){
 		tallestHeight = smHeight;
@@ -15,17 +15,24 @@ for(let mm of mainMenu){
 	
 	mm.addEventListener('mouseover',()=>{
 		header.style.height = `${headerHeight}px`;
-    header.style.backgroundColor = white;
-    header.style.color = white;
+
 	});
 	mm.addEventListener('mouseout',()=>{
 		header.style.height = `${initHeight}px`;
-    header.style.color = white;
+
 	});	
 }
 
 
+const herder = document.querySelector(".nav");
 
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 1080) {
+    herder.classList.add("fixed");
+   } else {
+    herder.classList.remove("fixed");
+   }
+});
 
 
 //event slide
