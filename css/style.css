@@ -17,7 +17,7 @@
 body {overflow-x: hidden;
         overflow-y:scroll;}
 main{
-    margin: auto 5% ;
+    margin: 1080px 5% auto;
     background-color: var(--back-color2);
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='2' stroke-dasharray='2%2c4%2c6%2c8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     box-sizing: border-box;
@@ -76,20 +76,31 @@ main .fix_img.img4{
 
 /*HEADER*/
 
+nav > ul {display:flex; justify-content:center; gap: 50px;}
 
+ul li {list-style:none;}
 
-.nav {
+header {	
+	background:transparent;
+	height:100px; 
+	transition:height 0.5s;
+	overflow:hidden;
+    position:fixed;
+    display: block;
+    transform: translate(center 0);
+    
+}
+
+nav {
     width:100%;
-    position: fixed;
     display:flex;
     justify-content: start;
     align-items: center;
     z-index: +5;
-    flex-wrap: nowrap;
-    
-}
+    flex-wrap: nowrap;}
 
-.nav > .menu{
+
+nav > .menu{
     width:100%;
     display: flex;
     justify-content: center;
@@ -100,46 +111,44 @@ main .fix_img.img4{
     transition:height 0.5s;
     background:linear-gradient(transparent);
 }
-header .nav .menu *{
+header nav .menu *{
     background-color: transparent;
     text-decoration: none;
     color: #F5F5F5;
     
 }
-header .nav .menu > li{
+header >nav> .menu > li {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
-    line-height: 50px;
+    line-height:50px;
     
 }
+header >nav> .menu > li > a{
+    line-height:80px;   
+}
 
-.nav .menu li, .nav .menu li .menu_s{
+nav .menu li{
     flex-direction:column;
     padding:5px;
     align-items: center;
     text-align: center;
-}
+} 
 
-.nav .menu li .menu_s{
+nav .menu li .menu_s{
     font-size: 22px;
 }
-.nav .sns{
+
+nav .sns{
     display: flex;
 }
-
-.nav .menu > .sns > li > a > i *{
-    font-size: 100px;
-}
-
 .content.bg {
-    position:relative;
-    background-image: url("../img/main_fixed_bg.png");
+    background-image: url("https://sjpark07.github.io/site/img/main_fixed_bg.png");
     width : 100%;
     height: 1080px;
     object-fit: cover;
-    z-index: -1;
+	z-index:-1;
 }
+
 /*LOGO_IMG & DESC*/
 h1 a{
     display: block;
@@ -162,7 +171,7 @@ h1 a{
   }
 
 .content.bg{
-    position:relative;
+    position:absolute;
 
 }
 
@@ -180,7 +189,7 @@ h1 a{
     animation-duration: 1s;
     animation-name: slidein_2;
   }
-/* 
+
   @keyframes slidein_2 {
     from {
       margin-left: 10%;
@@ -191,10 +200,11 @@ h1 a{
       margin-left: 0%;
       width: 100%;
     }
-  } */
+  } 
   
 .fixed {
     position: fixed;
+    color:#000;
     background:linear-gradient(transparent, rgba(255,255,255,0.5) 50px, rgba(255,255,255,0.5) );
 }
 /* EVENT & NEWS */
@@ -252,6 +262,22 @@ h1 a{
     display:none;
 }
 
+.slide_wrapper_event{
+    position:relative;
+}
+.controls .prev{
+    position:absolute;
+    top: 50%;
+    left: 100px;
+    color:#8a8a8a;
+}
+.controls .next{
+    position:absolute;
+    top: 50%;
+    right: 100px;
+    color:#8a8a8a;s
+}
+
 
 /* RECOMMEND */
 
@@ -264,8 +290,8 @@ h1 a{
     justify-content: center;
 }
 .recom_menu .beverage .be{
-    width:284px;
-    height:416px;
+    width:184px;
+    height:316px;
     border-radius: 20px;
     margin: 26px 13px 26px;
     font-family: var(--font-noto);
@@ -295,8 +321,8 @@ h1 a{
     justify-content: center;
 }
 .recom_menu .dessert .ds a{
-    width:284px;
-    height:416px;
+    width:184px;
+    height:316px;
     border-radius: 20px;
     margin: 26px 13px 26px;
     font-family: var(--font-noto);
@@ -323,7 +349,8 @@ h1 a{
     display: flex;
     white-space: nowrap;
     margin: auto;
-    background-color: #000;
+    background-size: contain;
+    background-color: whitesmoke;
 }
 .be3, .be4{
     display:none;
@@ -338,6 +365,7 @@ h1 a{
         box-sizing: border-box;
         display: flex;
         flex-wrap: nowrap;
+
     }
     .recom_menu .dessert .ds_menu .ds_menu_s{
         width: 100px;
@@ -345,6 +373,7 @@ h1 a{
         display: flex;
         white-space: nowrap;
         margin: auto;
+        background-size: contain;
         background-color: #000;  
     }  
 /*FRANCHISE*/
