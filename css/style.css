@@ -17,7 +17,7 @@
 body {overflow-x: hidden;
         overflow-y:scroll;}
 main{
-    margin: 1080px 5% auto;
+    margin: auto 5%;
     background-color: var(--back-color2);
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='2' stroke-dasharray='2%2c4%2c6%2c8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     box-sizing: border-box;
@@ -26,26 +26,19 @@ main{
     position:relative;
 }
 
-.event h2:first-child {
+h2 {
     text-align: center;
     font-family: var(--font-noto);
     font-weight:bold;
     font-size: 32px;
     display:block;
-    margin: auto 25px;
     width: 100%;
+    margin-bottom:75px;
 }
-/* main h2 {
-    text-align: center;
-    font-family: var(--font-noto);
-    font-weight:bold;
-    font-size: 32px;
-    display:block;
-    margin: 150px auto 25px;
-    width: 100%;
-} */
-
-
+/*section*/
+.event, .recom_menu, .franchise, .map{
+    padding-top: 175px;
+}
 
 main .fix_img{
     position:relative;
@@ -87,8 +80,15 @@ header {
 	overflow:hidden;
     position:fixed;
     display: block;
-    transform: translate(center 0);
+    left: 0;
+    right: 0;
+    top: 0;
+
     
+}
+
+header:hover{
+    background: rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -96,7 +96,6 @@ nav {
     display:flex;
     justify-content: start;
     align-items: center;
-    z-index: +5;
     flex-wrap: nowrap;}
 
 
@@ -144,7 +143,7 @@ nav .sns{
 .content.bg {
     background-image: url("https://sjpark07.github.io/site/img/main_fixed_bg.png");
     width : 100%;
-    height: 1080px;
+    height: 100vh;
     object-fit: cover;
 	z-index:-1;
 }
@@ -157,23 +156,9 @@ h1 a{
     height: 137.5px;
     text-indent: -9999em;
     overflow: hidden;
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
-    0%{
-        scale: 2000%;
-    }
-    100%{
-        scale: 100%;
-    }
-  }
-
-.content.bg{
-    position:absolute;
-
 }
+
+
 
 .content.desc {
     position:absolute;
@@ -205,16 +190,12 @@ h1 a{
 .fixed {
     position: fixed;
     color:#000;
-    background:linear-gradient(transparent, rgba(255,255,255,0.5) 50px, rgba(255,255,255,0.5) );
+    background: rgba(0, 0, 0, 0.2);
 }
 /* EVENT & NEWS */
 
 
 
-
-/* h2:first-child{
-    margin: 100px, auto, 25px;
-} */
 
 .eventbox{
     width:392px;
