@@ -20,7 +20,7 @@ for(let mm of mainMenu){
 		header.style.height = `${initHeight}px`;
 	});	
 }
-//스크롤시 메뉴색변경
+// 스크롤시 메뉴색변경
 // const herder = document.querySelector("nav");
 
 // document.addEventListener("scroll", () => {
@@ -39,8 +39,8 @@ const slideContainer = slideWrapper.querySelector('.slides');
 let slides = slideContainer.querySelectorAll('li');
 let currentIdx = 0;
 let slideCount = slides.length;
-const slideWidth = 392;
-const slideMargin = 20;
+const slideWidth = 375;
+const slideMargin = 40;
 const moveAmt = slideWidth + slideMargin;
 const slideToShow = 3;
 const prevBtn = slideWrapper.querySelector('.prev');
@@ -186,6 +186,75 @@ slideContainer.addEventListener('mouseup',(e)=>{
 });
 
 //recommend slide
+
+// const slide_wrapper_be = document.querySelector('.slide_wrapper_be');
+// const slide_container_be = slide_wrapper_be.querySelector('.beverage');
+// let be = slideContainer.querySelectorAll('li');
+// let currentIdx_be = 0;
+// let beCount = be.length;
+// const beWidth = 375;
+// const beMargin = 40;
+// const bemoveAmt = beWidth + beMargin;
+// const beslideToShow = 2;
+// const be_prevBtn = slide_wrapper_be.querySelector('.prev_be');
+// const be_nextBtn = slide_wrapper_be.querySelector('.next_be');
+// let timerbe;
+
+// //복사본 생성
+// //슬라이드 요소를 복사해 뒤에 추가
+// for(let b of be){
+//   let beClone = b.cloneNode(true);
+//   slideContainer.appendChild(beClone);
+// }
+// //슬라이드 요소를 복사해 앞에 추가
+// for(let a = 3;a>=0;a--){
+//   let beClone = be[a].cloneNode(true);
+//   slideContainer.prepend(beClone);
+// }
+
+// //slideContainer의 너비를 지정
+// slides = slideContainer.querySelectorAll('li');
+// let newslideCount = slides.length;
+
+// //슬라이드 중앙 배치
+// slideContainer.style.width = slideWidth*newslideCount+slideMargin *(newslideCount-1)+'px';
+// slideContainer.style.transform = `translateX(${moveAmt*-slideCount}px)`;
+
+// //이동함수
+// function moveSlide(idxbe){
+//   slideContainer.style.left = `${-idx*moveAmt}px`;
+//   currentIdx_be = idxbe;
+
+//   if(currentIdx_be == -beCount || currentIdx_be == beCount){
+//     setTimeout(()=>{
+//       beContainer.classList.remove('animated');
+//       beContainer.style.left = 0;
+//     },500);
+//     setTimeout(()=>{
+//       beContainer.classList.add('animated');
+//     },550);
+    
+//     currentIdx_be = 0;
+//   }
+//   console.log(currentIdx_be);
+// }
+// //이전 버튼으로 이동하기
+// /*
+// prevBtn.addEventListener('click',()=>{  
+//   moveSlide(currentIdx-1); 
+// });
+
+// //다음 버튼으로 이동하기
+// nextBtn.addEventListener('click',()=>{  
+//   moveSlide(currentIdx+1); 
+// });
+// */
+// prevBtn.addEventListener('click',debounce(()=>{
+//   moveSlide(currentIdx_be-1);
+// },500));
+// nextBtn.addEventListener('click',debounce(()=>{
+//   moveSlide(currentIdx_be+1); 
+// },500));
 
 
 
