@@ -452,10 +452,42 @@ footer .sitemap{
     display: flex;
     justify-content: center;
     font-weight: bold;
-    gap:50px;
+    gap:100px;
+    text-align: center;
+}
+.sitemap{
+    padding-top: 25px;
+    padding-bottom: 50px;
 }
 
+.sitemap dt *{
+    font-size:15px;
+    line-height: 25px;
+    text-decoration: none;
+    font-family: var(--font-noto);
+    color:#51433B;
+}
+
+.sitemap dd *{
+    font-size:12px;
+    line-height: 25px;
+    text-decoration: none;
+    font-family: var(--font-noto);
+    color:#51433B;
+
+}
 footer .sitemap, .copyright{
     background-color: var(--back-color1);
     margin: auto 5%;
+    color:#292626;
+    font-family: var(--font-noto);
+    font-size:15px;
+    line-height: 25px;
+}
+.copyright:after{
+    content:'';
+    display:block;
+    height:20px;
+    background: #8E8910;
+    opacity: 85%;
 }
