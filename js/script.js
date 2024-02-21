@@ -34,15 +34,13 @@ for(let mm of mainMenu){
 
 
 //event slide
-
-
 const slideWrapper = document.querySelector('.slide_wrapper');
-const slideContainer = slideWrapper.querySelector('.eventbox');
+const slideContainer = slideWrapper.querySelector('.slides');
 let slides = slideContainer.querySelectorAll('li');
 let currentIdx = 0;
 let slideCount = slides.length;
-const slideWidth = 200;
-const slideMargin = 30;
+const slideWidth = 392;
+const slideMargin = 20;
 const moveAmt = slideWidth + slideMargin;
 const slideToShow = 3;
 const prevBtn = slideWrapper.querySelector('.prev');
@@ -186,8 +184,6 @@ slideContainer.addEventListener('mouseup',(e)=>{
     }
   }
 });
-
-
 
 //recommend slide
 

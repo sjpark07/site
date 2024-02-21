@@ -23,7 +23,7 @@ main{
     box-sizing: border-box;
     text-align: center;
     border-color:#000;
-    position:relative;
+    /* position:relative; */
 }
 
 h2 {
@@ -83,6 +83,7 @@ header {
     left: 0;
     right: 0;
     top: 0;
+    z-index: 1000;
 
     
 }
@@ -147,19 +148,6 @@ nav .sns{
     object-fit: cover;
 	z-index:-1;
 }
-
-/*LOGO_IMG & DESC*/
-h1 a{
-    display: block;
-    background-image: url("../img/dessert39_logo2_gra.png");
-    width: 112px;
-    height: 137.5px;
-    text-indent: -9999em;
-    overflow: hidden;
-}
-
-
-
 .content.desc {
     position:absolute;
     left: 1227px;
@@ -187,45 +175,112 @@ h1 a{
     }
   } 
   
-.fixed {
-    position: fixed;
-    color:#000;
-    background: rgba(0, 0, 0, 0.2);
+/*LOGO_IMG & DESC*/
+h1 a{
+    display: block;
+    background-image: url("../img/dessert39_logo2_gra_3_icon_s.png");
+    width: 65px;
+    height: 100px;
+    top:0;
+    left :50px;
+    bottom: auto;
+    right: 50px;
+    text-indent: -9999em;
+    overflow: hidden;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: drop-shadow(0px 7px 7px rgba(142, 137, 16, 0.78));
+}
+
+
+header .fixed {
+    position: sticky;
+    color:#F5F5F5;
+    background: rgba(0, 0, 0, 1);
 }
 /* EVENT & NEWS */
 
+.container{
+	width: 1256px;
+	margin:0 auto;
+    height: 650px;
+}
 
+.slide_wrapper{
+	position: relative;
+	width:1256px;
+	margin: 0 auto;
+	
+	overflow:hidden;
+}
+.slides{
+	height:650px;
+	width:100%;
+	display: flex;
+	gap:20px;
+	left: 0;
+	position: relative;	
+    
+}
+.slides.animated{
+	transition:left 0.5s;
+}
 
-
-.eventbox{
-    width:392px;
-    height:650px;
-    border-radius: 20px;
+.slides li{
+	width: 392px;
+	height: 650px;
+	border-radius: 20px;
     background: var(--point-color_2);
-    margin: 26px 13px 26px;
+    margin: 26px 20px;
     font-family: var(--font-noto);
     font-weight: bold;
     text-align: center;
     font-size: 24px;
     box-sizing: border-box;
     display: inline-block;
-    
 }
 
-.eventbox a img p{
-    padding:20px 0;
-}
 
-.eventbox img{
+.slides li img{
     display:flex;
     width: 100%;
     height:600px;
     border-radius: 20px;
     flex-wrap: nowrap;
     text-transform: inherit;
+    top:0;
 }
 
-.more{
+ 
+.eventbox{
+    width:392px;
+    height:650px;
+    border-radius: 20px;
+    background: var(--point-color_2);
+    /* margin: 30px 30px; */
+    font-family: var(--font-noto);
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    box-sizing: border-box;
+    display: inline-block;
+ 
+    
+}
+.eventbox a img{
+    display:flex;
+    border-radius: 20px;
+    flex-wrap: nowrap;
+    text-transform: inherit;
+    top:0;
+    object-fit: cover;
+}
+.eventbox a {
+    color:#322020;
+    text-decoration: none;
+}
+.more a{
     display: block;
     width: 159px;
     text-align: center;
@@ -237,44 +292,42 @@ h1 a{
     padding: auto;
     margin: auto;
     line-height: 50px;
+    text-decoration: none;
 }
 
-.eventimg4,.eventimg5{
-    display:none;
-}
-
-.slide_wrapper_event{
-    position:relative;
-}
-.controls .prev{
+.controls_event .prev{
     position:absolute;
     top: 50%;
-    left: 100px;
+    left: -1000px;
     color:#8a8a8a;
 }
-.controls .next{
+.controls_event .next{
     position:absolute;
     top: 50%;
-    right: 100px;
-    color:#8a8a8a;s
+    right: -1000px;
+    color:#8a8a8a;
 }
 
+.slide_wrapper {
+    position: relative;
+}
 
 /* RECOMMEND */
 
+.slide_container_be{
+display: flex;
+}
 
-
-.recom_menu .beverage{
+.beverage, .dessert{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
-.recom_menu .beverage .be{
-    width:184px;
-    height:316px;
+.slide_wrapper_ds, .slide_wrapper_be{
+    width: calc(33.33% - 20px);
+    margin: 10px;
     border-radius: 20px;
-    margin: 26px 13px 26px;
     font-family: var(--font-noto);
     font-weight: bold;
     text-align: center;
@@ -282,9 +335,6 @@ h1 a{
     box-sizing: border-box;
     background-color: white;
     box-shadow: 5px #000;
-}
-.recom_menu .beverage .be a img{
-    width: 100%;
 }
 
 .recom_menu .beverage .be_menu .be_menu_s{
@@ -301,9 +351,9 @@ h1 a{
     align-items: center;
     justify-content: center;
 }
-.recom_menu .dessert .ds a{
-    width:184px;
-    height:316px;
+.be *, .ds *{
+    width:394px;
+    height:526px;
     border-radius: 20px;
     margin: 26px 13px 26px;
     font-family: var(--font-noto);
@@ -313,25 +363,19 @@ h1 a{
     box-sizing: border-box;
     background-color: white;
 }
-.recom_menu .dessert .ds a img{
-    width: 100%;
+
+.be_menu, .ds_menu{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
 }
 
-.recom_menu .beverage .be_menu{
-    width: 500px;
-    height: 500px;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.recom_menu .beverage .be_menu .be_menu_s{
+s.be_menu_s{
     width: 100px;
     height: 100px;
     display: flex;
     white-space: nowrap;
     margin: auto;
-    background-size: contain;
-    background-color: whitesmoke;
 }
 .be3, .be4{
     display:none;
@@ -340,17 +384,9 @@ h1 a{
     display:none;
     }
 
-.recom_menu .dessert .ds_menu{
-        width: 500px;
-        height: 500px;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: nowrap;
-
-    }
-    .recom_menu .dessert .ds_menu .ds_menu_s{
-        width: 100px;
-        height: 100px;
+.be_menu_s a img, .ds_menu_s a img{
+        width: 100%;
+        height: 100%;
         display: flex;
         white-space: nowrap;
         margin: auto;
