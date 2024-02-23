@@ -23,7 +23,7 @@ main{
     box-sizing: border-box;
     text-align: center;
     border-color:#000;
-    /* position:relative; */
+    position:relative;
 }
 
 h2 {
@@ -40,32 +40,28 @@ h2 {
     padding-top: 175px;
 }
 
-main .fix_img{
-    position:relative;
-}
-
-main .fix_img.img1{
+main .fix_img1{
     position: absolute;
     object-fit: cover;    
-    transform: translate(1376.22px, 896px) rotate(14.25deg);
+    transform: translate(1376px, 896px) rotate(14.25deg);
     z-index: 500;
   } 
 
 
-main .fix_img.img2{
+main .fix_img2{
     position:absolute;
     transform: translate(-80px, 1699px) rotate(-11.73deg) scaleX(-1);
     object-fit: cover;
     z-index: 500;
 }
-main .fix_img.img3{
+main .fix_img3{
     position:absolute;
     transform: translate(1419px, 2547px) rotate(-6.78deg);
     object-fit: cover;
     z-index: 500;
 
 }
-main .fix_img.img4{
+main .fix_img4{
     position:absolute;
     transform: translate(-80px, 3415px) rotate(-5.17deg) scaleX(-1);
     object-fit: cover;
@@ -74,27 +70,58 @@ main .fix_img.img4{
 }
 /*fix img animation*/
 
-.animated{
-animation-duration: 2s;
-animation-name: move;
+.animated1{
+animation-duration:2s;
+animation-name: move1;
 }
 
-@keyframes move {
-0% {
-  transform:translateX(1276px);
-  transform:translateY(796px);
+@keyframes move1 {
+from {
+  transform:translate(1376px 796px);
 }
-50% {
-    transform:translateX(1326px);
-    transform:translateY(846px);
-  }
-100% {
-    transform:translateX(1376px);
-    transform:translateY(896px);
+to {
+    transform:translate(1376px 896px);
 }
 }
-
-
+.animated2{
+    animation-duration:2s;
+    animation-name: move2;
+    }
+    
+    @keyframes move2 {
+    from {
+      transform:translateY(1599px) scaleX(-1);
+    }
+    to {
+        transform:translateY(1699px) scaleX(-1);
+    }
+    }
+    .animated3{
+        animation-duration:2s;
+        animation-name: move3;
+        }
+        
+        @keyframes move3 {
+        from {
+          transform:translateY(2447px);
+        }
+        to {
+            transform:translateY(2547px);
+        }
+        }
+        .animated4{
+            animation-duration:2s;
+            animation-name: move4;
+            }
+            
+            @keyframes move4 {
+            from {
+              transform:translateY(3315px) scaleX(-1);
+            }
+            to {
+                transform:translateY(3415px) scaleX(-1);
+            }
+            }
 /*HEADER*/
 
 nav >.top_menu> ul {display:flex; justify-content:center; gap: 50px;}
@@ -342,6 +369,7 @@ header .fixed {
 	width:760px;
 	margin: 0 auto;
 	overflow:hidden;
+    position:relative;
 }
 .slides_ds, .slides_be{
 	height:494px;
@@ -413,13 +441,13 @@ padding:25px;
 .controls_ds .prev_ds, .controls_be .prev_be{
 	position:absolute;
 	top: 253px;
-	left: 0px;
+	left: 50px;
 	color:#8a8a8a;
 }
 .controls_ds .next_ds, .controls_be .next_be{
 	position:absolute;
 	top: 253px;
-	right: 0px;
+	right:50px;
 	color:#8a8a8a;
 }
 
