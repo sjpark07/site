@@ -1,5 +1,5 @@
 //header - nav menu
-const mainMenu = document.querySelectorAll('nav > ul > li');
+const mainMenu = document.querySelectorAll('nav > .top_menu > ul > li');
 const header = document.querySelector('header');
 const initHeight = header.offsetHeight;
 let tallestHeight = 0;
@@ -21,16 +21,28 @@ for(let mm of mainMenu){
 	});	
 }
 // 스크롤시 메뉴색변경
-// const herder = document.querySelector("nav");
+const herder = document.querySelector("nav");
 
-// document.addEventListener("scroll", () => {
-//   if (window.scrollY > 1080) {
-//     herder.classList.add("fixed");
-//    } else {
-//     herder.classList.remove("fixed");
-//    }
-// });
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 950) {
+    herder.classList.add("fixed");
+   } else {
+    herder.classList.remove("fixed");
+   }
+   console.log(window.scrollY);
+});
 
+//fix image animation
+const fix_img1 = document.querySelector(".fix_img:nth-child(1)");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 896) {
+    fix_img1.classList.add("animated");
+   } else {
+    fix_img1.classList.remove("animated");
+   }
+   console.log(window.scrollY);
+});
 
 
 //event slide
@@ -350,8 +362,8 @@ const slideWidth3 = 350;
 const slideMargin3 = 30;
 const moveAmt3 = slideWidth3 + slideMargin3;
 const slideToShow3 = 2;
-const prevBtn3 = slideWrapper2.querySelector('.prev_ds');
-const nextBtn3 = slideWrapper2.querySelector('.next_ds');
+const prevBtn3 = slideWrapper3.querySelector('.prev_ds');
+const nextBtn3 = slideWrapper3.querySelector('.next_ds');
 let timer3;
 
 //복사본 생성
