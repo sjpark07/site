@@ -262,6 +262,7 @@ slideContainer2.style.transform = `translateX(${moveAmt2*-slideCount2}px)`;
 
 //이동함수
 function moveSlide2(idx2){
+  console.log('작동');
   slideContainer2.style.left = `${-idx2*moveAmt2}px`;
   currentIdx2 = idx2;
 
