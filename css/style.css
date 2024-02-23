@@ -73,6 +73,8 @@ main .fix_img4{
 .animated1{
 animation-duration:2s;
 animation-name: move1;
+animation-fill-mode: both;
+
 }
 
 @keyframes move1 {
@@ -86,11 +88,14 @@ to {
 .animated2{
     animation-duration:2s;
     animation-name: move2;
+    animation-fill-mode: both;
     }
     
     @keyframes move2 {
     from {
       transform:translateY(1599px) scaleX(-1);
+      trans
+
     }
     to {
         transform:translateY(1699px) scaleX(-1);
@@ -99,6 +104,8 @@ to {
     .animated3{
         animation-duration:2s;
         animation-name: move3;
+        animation-fill-mode: both;
+
         }
         
         @keyframes move3 {
@@ -112,6 +119,8 @@ to {
         .animated4{
             animation-duration:2s;
             animation-name: move4;
+            animation-fill-mode: both;
+
             }
             
             @keyframes move4 {
