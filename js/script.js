@@ -300,22 +300,22 @@ slideContainer2.addEventListener('mouseenter',()=>{
 slideContainer2.addEventListener('mouseleave',()=>{
   autoSlide2();
 });
-// let xAxis = {
+// let xAxis2 = {
 //   downX:0,
 //   upX:0
 // }
-// let yAxis = {
+// let yAxis2 = {
 //   downY:0,
 //   upY:0
 // }
 
-// slideContainer2.addEventListener('mousedown',(e)=>{
-//   xAxis.downX = e.clientX;
-//   yAxis.downY = e.clientY;
+// slideContainer2.addEventListener('mousedown',(ee)=>{
+//   xAxis2.downX = ee.clientX;
+//   yAxis2.downY = ee.clientY;
 // });
-// slideContainer2.addEventListener('mouseup',(e)=>{
-//   xAxis.upX = e.clientX;
-//   yAxis.upY = e.clientY;
+// slideContainer2.addEventListener('mouseup',(ee)=>{
+//   xAxis.upX = ee.clientX;
+//   yAxis.upY = ee.clientY;
 //   let differenceX;
 //   let differenceY;
 
