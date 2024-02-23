@@ -370,6 +370,9 @@ width: 100%;
 	justify-content: center;
 	align-items: center;
 }
+.ds_menu, .be_menu:hover{
+	background:#ccc;
+	transition: 0.3s;
 /*ds*/
 
 .dessert{
