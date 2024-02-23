@@ -48,22 +48,29 @@ main .fix_img.img1{
     position: absolute;
     object-fit: cover;    
     transform: translate(1376.22px, 896px) rotate(14.25deg);
+    z-index: 500;
 }
 
 main .fix_img.img2{
     position:absolute;
     transform: translate(-80px, 1699px) rotate(-11.73deg) scaleX(-1);
     object-fit: cover;
+    z-index: 500;
+
 }
 main .fix_img.img3{
     position:absolute;
-    transform: translate(1419px, 2347px) rotate(-6.78deg);
+    transform: translate(1419px, 2547px) rotate(-6.78deg);
     object-fit: cover;
+    z-index: 500;
+
 }
 main .fix_img.img4{
     position:absolute;
-    transform: translate(-80px, 3083px) rotate(-5.17deg) scaleX(-1);
+    transform: translate(-80px, 3435px) rotate(-5.17deg) scaleX(-1);
     object-fit: cover;
+    z-index: 500;
+
 }
 
 
@@ -295,65 +302,30 @@ header .fixed {
 
 
 /* RECOMMEND */
-/*be*/
-.dessert{
-    flex-direction: row-reverse;
+/*common*/
+.dessert, .beverage{
+	display:flex ;
+    margin: 100px 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
 }
-
-/*ds*/
 .slide_container_ds, .slide_container_be{
-	width: 500px;
-	margin:0 auto;
+	margin:0 50px;
 }
 
 .slide_wrapper_ds, .slide_wrapper_be{
-	position: relative;
 	width:808px;
 	margin: 0 auto;
-	
 	overflow:hidden;
 }
 .slides_ds, .slides_be{
 	height:506px;
-	width:100%;
 	display: flex;
 	gap:30px;
-	left: 0;
-	position: relative;	
 }
 
 
-.controls_ds .prev_ds, .controls_be .prev_be{
-	position:absolute;
-	top: 253px;
-	left: 0px;
-	color:#8a8a8a;
-}
-.controls_ds .next_ds, .controls_be .next_be{
-	position:absolute;
-	top: 253px;
-	right: 0px;
-	color:#8a8a8a;
-}
-
-
-.dessert, .beverage{
-	padding-top:200px;
-	display:flex ;
-	justify-content: end;
-	padding: 0 20px;
-}
-
-.ds_menu, .be_menu{
-	display: grid;
-	grid-template-columns: 120px 120px 120px;
-	grid-column-gap:20px;
-	grid-template-rows: 120px 120px 120px;
-	grid-row-gap:20px;
-	justify-content: center;
-	align-items: center;
-	bottom:50%
-}
 
 .slides_ds .ds, .slides_be .be {
 	width:374px;
@@ -371,8 +343,41 @@ header .fixed {
 } 
 .ds a img, .be a img {
 width: 100%;
-
 }
+
+
+.controls_ds .prev_ds, .controls_be .prev_be{
+	position:absolute;
+	top: 253px;
+	left: 0px;
+	color:#8a8a8a;
+}
+.controls_ds .next_ds, .controls_be .next_be{
+	position:absolute;
+	top: 253px;
+	right: 0px;
+	color:#8a8a8a;
+}
+
+
+
+.ds_menu, .be_menu{
+	display: grid;
+	grid-template-columns: 120px 120px 120px;
+	grid-column-gap:20px;
+	grid-template-rows: 120px 120px 120px;
+	grid-row-gap:20px;
+	justify-content: center;
+	align-items: center;
+}
+/*ds*/
+
+.dessert{
+    flex-direction: row-reverse;
+}
+
+
+
 /*FRANCHISE*/
 
 
