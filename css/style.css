@@ -165,13 +165,13 @@ main .fix_img4 {
 
 @keyframes move4 {
     from {
-        transform: translateY(3490px) scaleX(-1);
+        transform: translateY(3500px) scaleX(-1);
         left: -80px;
 
     }
 
     to {
-        transform: translateY(3540px) scaleX(-1);
+        transform: translateY(3550px) scaleX(-1);
         left: -80px;
 
     }
