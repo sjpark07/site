@@ -666,10 +666,10 @@ function removeAllChildNods(el) {
 }
 
 //FOOTER
-// const anif = document.querySelector(".anif");
+// const anif = document.querySelector(".footer_r");
 
 //     document.addEventListener("scroll", () => {
-//       if (window.scrollY > 4300) {
+//       if (window.scrollY = window.offsetHeight -500) {
 //         anif.classList.add("anif");
 //        } else {
 //         anif.classList.remove("anif");
