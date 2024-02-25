@@ -24,7 +24,9 @@
 body {
     overflow-x: hidden;
     overflow-y: scroll;
-
+    background-image: repeating-linear-gradient(45deg, rgba(210, 240, 172, 0.98) 0, rgba(182, 251, 91, 0.98) 0.5px, transparent 0, transparent 50%);
+    background-size: 10px 10px;
+    background-color: #fefefa;
 }
 
 .border {
@@ -272,7 +274,7 @@ nav .top_menu .menu li .menu_s {
 }
 
 .content.bg {
-    background-image: url("https://sjpark07.github.io/site/img/main_fixed_bg.png");
+    background-image: url("../img/main_fixed_bg.png");
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -326,7 +328,6 @@ h1 a {
     object-fit: cover;
     filter: drop-shadow(0px 7px 7px rgba(142, 137, 16, 0.5));
 }
-
 
 header .fixed {
     position: sticky;
@@ -504,11 +505,6 @@ header .fixed {
 .slides_be ul .be:hover {
     filter: drop-shadow(0px 2px 2px rgba(142, 137, 16, 0.1));
 }
-
-/* .be_menu_s:active,
-.ds_menu_s:active {
-    background-color: #009900;
-} */
 
 
 .ds a,
@@ -873,7 +869,7 @@ footer {
     /* Safari and Chrome */
     -o-animation: fadein 5s;
     /* Opera */
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 }
 
 @keyframes fadein {
