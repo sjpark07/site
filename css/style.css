@@ -474,7 +474,7 @@ header .fixed {
     font-family: var(--font-noto);
     font-weight: bold;
     text-align: center;
-    font-size: var(--font-size23);
+    font-size: var(--font-size20);
     box-sizing: padding-box;
     background-color: white;
     margin: 0 auto;
@@ -787,22 +787,30 @@ header .fixed {
 footer{
     margin: auto 5%;
 }
-.sitemap{
-    display: flex;
+
+.fbg{
+    display: grid;
+    grid-template-areas:
+    "fl s fr"
+    "fl c fr"
+    "fc fc fc";
 }
 
-.fbg:before{
-    width: 466px;
-    height: 500px;
+.footer_l{
+    grid-area:fl;
     left:0;
     bottom:0;
+    background-image: url(../img/footerl.png);
+    background-size: cover;
+    
     
 }
-.fbg:after{
-    width: 484px;
-    height: 560px;
+.footer_r{
+    grid-area:fr;
     right:0;
     bottom:0;
+    background-image: url(../img/footerr.png);
+    background-size: cover;
 }
 
 .sitemap ul {
@@ -814,14 +822,18 @@ footer{
 }
 
 .copyright {
+    grid-area:c;
     text-align: center;
 }
 
 .footer_s{
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 .sitemap {
+    grid-area:s;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -847,8 +859,7 @@ footer{
     color: #51433B;
 
 }
-.sitemap,
-.copyright {
+footer {
     background-color: var(--back-color1);
     color: #292626;
     font-family: var(--font-noto);
