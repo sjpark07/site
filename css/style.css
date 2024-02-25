@@ -24,9 +24,9 @@
 body {
     overflow-x: hidden;
     overflow-y: scroll;
-    background-image: repeating-linear-gradient(45deg, rgba(210, 240, 172, 0.98) 0, rgba(182, 251, 91, 0.98) 0.5px, transparent 0, transparent 50%);
-    background-size: 10px 10px;
-    background-color: #fefefa;
+    /* background-image: repeating-linear-gradient(45deg, rgba(210, 240, 172, 0.98) 0, rgba(182, 251, 91, 0.98) 0.5px, transparent 0, transparent 50%);
+    background-size: 10px 10px; */
+    background-color: #FFFCF5;
 }
 
 .border {
