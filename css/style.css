@@ -859,6 +859,8 @@ footer {
     grid-area: fl;
     background-image: url(../img/footerl.png);
     background-size: cover;
+    padding-right:200px;
+
 }
 
 .anif {
@@ -923,6 +925,7 @@ footer {
     margin-top: 5px;
     background-image: url(../img/footerr.png);
     background-size: cover;
+    padding-left:200px;
 }
 
 .sitemap ul {
@@ -945,12 +948,12 @@ footer {
 
 .sitemap {
     grid-area: s;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     font-weight: bold;
-    justify-content: space-between;
+    justify-content: space-evenly;
     ;
     text-align: center;
     padding-top: 25px;
