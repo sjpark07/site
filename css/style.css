@@ -585,6 +585,7 @@ header .fixed {
 
 .be_menu_s a img,
 .ds_menu_s a img {
+    width: 80%;
     object-fit: cover;
     justify-content: center;
     align-items: center;
@@ -599,7 +600,7 @@ header .fixed {
     border-radius: 20px;
     padding: 5px;
     position: relative;
-    display: inline-block;
+    display: block;
     background: linear-gradient(45deg, rgba(255, 126, 95, 0.1), rgba(131, 255, 166, 0.1));
 }
 
