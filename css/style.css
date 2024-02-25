@@ -494,7 +494,9 @@ header .fixed {
     background-color: white;
     margin: 0 auto;
     padding: 10px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     filter: drop-shadow(0px 7px 7px rgba(142, 137, 16, 0.25));
 }
 
@@ -507,6 +509,7 @@ header .fixed {
 .ds_menu_s:active {
     background-color: #009900;
 } */
+
 
 .ds a,
 .be a {
@@ -550,12 +553,12 @@ header .fixed {
     transition: 0.3s;
 }
 
-/* .prev_ds, .prev_be, .next_ds, .next_be{
+.prev_ds, .prev_be, .next_ds, .next_be{
     position: absolute;
     top: 150px;
     font-size: 3em;
     color: #8a8a8a;
-} */
+}
 .prev_ds,
 .prev_be {
     left: 50px;
