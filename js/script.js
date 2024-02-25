@@ -268,180 +268,180 @@ tabMenu2.forEach(function (item2, idx2) {
 
 
 
-// //recommend slide
-// //beverage
-// const slideWrapper2 = document.querySelector('.slide_wrapper_be');
-// const slideContainer2 = slideWrapper2.querySelector('.slides_be ul');
-// let slides2 = slideContainer2.querySelectorAll('.slides_be ul li');
-// let currentIdx2 = 0;
-// let slideCount2 = slides2.length;
-// const slideWidth2 = 357;
-// const slideMargin2 = 42;
-// const moveAmt2 = slideWidth2 + slideMargin2;
-// const slideToShow2 = 2;
-// const prevBtn2 = slideWrapper2.querySelector('.prev_be');
-// const nextBtn2 = slideWrapper2.querySelector('.next_be');
-// let timer2;
-
-// // //복사본 생성
-// // //슬라이드 요소를 복사해 뒤에 추가
-// for(let slide2 of slides2){
-//   let slideClone2 = slide2.cloneNode(true);
-//   slideContainer2.appendChild(slideClone2);
-// }
-// //슬라이드 요소를 복사해 앞에 추가
-// for(let ii = 3;ii>=0;ii--){
-//   let slideClone2 = slides2[ii].cloneNode(true);
-//   slideContainer2.prepend(slideClone2);}
-
-// //slideContainer2의 너비를 지정
-// slides2 = slideContainer2.querySelectorAll('.slides_be ul li');
-// let newslideCount2 = slides2.length;
-
-// //슬라이드 중앙 배치
-// slideContainer2.style.width = slideWidth2*newslideCount2+slideMargin2 *(newslideCount2-1)+'px';
-// slideContainer2.style.transform = `translateX(${moveAmt2*-slideCount2}px)`;
-
-// //이동함수
-// function moveSlide2(idx2){
-//   slideContainer2.style.left = `${-idx2*moveAmt2}px`;
-//   currentIdx2 = idx2;
-
-//   if(currentIdx2 == -slideCount2 || currentIdx2 == slideCount2){
-//     setTimeout(()=>{
-//       slideContainer2.classList.remove('animated');
-//       slideContainer2.style.left = 0;
-//     },500);
-//     setTimeout(()=>{
-//       slideContainer2.classList.add('animated');
-//     },550);
-
-//     currentIdx2 = 0;
-//   }
-//   console.log(currentIdx2);
-// }
-
-
-// prevBtn2.addEventListener('click',debounce2(()=>{
-//   moveSlide2(currentIdx2-1);
-// },500));
-// nextBtn2.addEventListener('click',debounce2(()=>{
-//   moveSlide2(currentIdx2+1); 
-// },500));
-
-// //debounce 
-
-// function debounce2(callback2, time2){
-//   console.log(typeof(callback2));
-//   let slideTrigger2 = true;
-//   console.log(slideTrigger2);
-//   return ()=>{
-//     if(slideTrigger2){
-//       callback2();
-//       slideTrigger2 = false;
-//       setTimeout(()=>{
-//         slideTrigger2 = true;
-//       },time2);
-//     }
-//     console.log(slideTrigger2);
-//   }
-//   console.log(slideTrigger2);
-// }
-
-
-
-// function autoSlide2(){
-//   timer = setInterval(()=>{
-//     moveSlide2(currentIdx2+1); 
-//   }, 4000);
-// }
-
-
-
-// //dessert
-// const slideWrapper3 = document.querySelector('.slide_wrapper_ds');
-// const slideContainer3 = slideWrapper3.querySelector('.slides_ds>ul');
-// let slides3 = slideContainer3.querySelectorAll('.ds');
-// let currentIdx3 = 0;
-// let slideCount3 = slides3.length;
-// const slideWidth3 = 357;
-// const slideMargin3 = 42;
-// const moveAmt3 = slideWidth3 + slideMargin3;
-// const slideToShow3 = 2;
-// const prevBtn3 = slideWrapper3.querySelector('.prev_ds');
-// const nextBtn3 = slideWrapper3.querySelector('.next_ds');
-// let timer3;
+//recommend slide
+//beverage
+const slideWrapper2 = document.querySelector('.slide_wrapper_be');
+const slideContainer2 = slideWrapper2.querySelector('.slides_be ul');
+let slides2 = slideContainer2.querySelectorAll('.slides_be ul li');
+let currentIdx2 = 0;
+let slideCount2 = slides2.length;
+const slideWidth2 = 357;
+const slideMargin2 = 42;
+const moveAmt2 = slideWidth2 + slideMargin2;
+const slideToShow2 = 2;
+const prevBtn2 = slideWrapper2.querySelector('.prev_be');
+const nextBtn2 = slideWrapper2.querySelector('.next_be');
+let timer2;
 
 // //복사본 생성
 // //슬라이드 요소를 복사해 뒤에 추가
-// for(let slide3 of slides3){
-//   let slideClone3 = slide3.cloneNode(true);
-//   slideContainer3.appendChild(slideClone3);
-// }
-// //슬라이드 요소를 복사해 앞에 추가
-// for(let iii = 3;iii>=0;iii--){
-//   let slideClone3 = slides3[iii].cloneNode(true);
-//   slideContainer3.prepend(slideClone3);
-// }
+for(let slide2 of slides2){
+  let slideClone2 = slide2.cloneNode(true);
+  slideContainer2.appendChild(slideClone2);
+}
+//슬라이드 요소를 복사해 앞에 추가
+for(let ii = 3;ii>=0;ii--){
+  let slideClone2 = slides2[ii].cloneNode(true);
+  slideContainer2.prepend(slideClone2);}
 
-// //slideContainer3의 너비를 지정
-// slides3 = slideContainer3.querySelectorAll('.ds');
-// let newslideCount3 = slides3.length;
+//slideContainer2의 너비를 지정
+slides2 = slideContainer2.querySelectorAll('.slides_be ul li');
+let newslideCount2 = slides2.length;
 
-// //슬라이드 중앙 배치
-// slideContainer3.style.width = slideWidth3*newslideCount3+slideMargin3 *(newslideCount3-1)+'px';
-// slideContainer3.style.transform = `translateX(${moveAmt3*-slideCount3}px)`;
+//슬라이드 중앙 배치
+slideContainer2.style.width = slideWidth2*newslideCount2+slideMargin2 *(newslideCount2-1)+'px';
+slideContainer2.style.transform = `translateX(${moveAmt2*-slideCount2}px)`;
 
-// //이동함수
-// function moveSlide3(idx3){
-//   slideContainer3.style.left = `${-idx3*moveAmt3}px`;
-//   currentIdx3 = idx3;
+//이동함수
+function moveSlide2(idx2){
+  slideContainer2.style.left = `${-idx2*moveAmt2}px`;
+  currentIdx2 = idx2;
 
-//   if(currentIdx3 == -slideCount3 || currentIdx3 == slideCount3){
-//     setTimeout(()=>{
-//       slideContainer3.classList.remove('animated');
-//       slideContainer3.style.left = 0;
-//     },500);
-//     setTimeout(()=>{
-//       slideContainer3.classList.add('animated');
-//     },550);
+  if(currentIdx2 == -slideCount2 || currentIdx2 == slideCount2){
+    setTimeout(()=>{
+      slideContainer2.classList.remove('animated');
+      slideContainer2.style.left = 0;
+    },500);
+    setTimeout(()=>{
+      slideContainer2.classList.add('animated');
+    },550);
 
-//     currentIdx3 = 0;
-//   }
-//   console.log(currentIdx3);
-// }
-// prevBtn3.addEventListener('click',debounce3(()=>{
-//   moveSlide3(currentIdx3-1);
-// },500));
-// nextBtn3.addEventListener('click',debounce3(()=>{
-//   moveSlide3(currentIdx3+1); 
-// },500));
-
-// //debounce 
-
-// function debounce3(callback3, time3){
-//   console.log(typeof(callback3));
-//   let slideTrigger3 = true;
-//   console.log(slideTrigger3);
-//   return ()=>{
-//     if(slideTrigger3){
-//       callback3();
-//       slideTrigger3 = false;
-//       setTimeout(()=>{
-//         slideTrigger3 = true;
-//       },time3);
-//     }
-//     console.log(slideTrigger3);
-//   }
-//   console.log(slideTrigger3);
-// }
+    currentIdx2 = 0;
+  }
+  console.log(currentIdx2);
+}
 
 
-// function autoSlide3(){
-//   timer = setInterval(()=>{
-//     moveSlide3(currentIdx3+1); 
-//   }, 4000);
-// }
+prevBtn2.addEventListener('click',debounce2(()=>{
+  moveSlide2(currentIdx2-1);
+},500));
+nextBtn2.addEventListener('click',debounce2(()=>{
+  moveSlide2(currentIdx2+1); 
+},500));
+
+//debounce 
+
+function debounce2(callback2, time2){
+  console.log(typeof(callback2));
+  let slideTrigger2 = true;
+  console.log(slideTrigger2);
+  return ()=>{
+    if(slideTrigger2){
+      callback2();
+      slideTrigger2 = false;
+      setTimeout(()=>{
+        slideTrigger2 = true;
+      },time2);
+    }
+    console.log(slideTrigger2);
+  }
+  console.log(slideTrigger2);
+}
+
+
+
+function autoSlide2(){
+  timer = setInterval(()=>{
+    moveSlide2(currentIdx2+1); 
+  }, 4000);
+}
+
+
+
+//dessert
+const slideWrapper3 = document.querySelector('.slide_wrapper_ds');
+const slideContainer3 = slideWrapper3.querySelector('.slides_ds>ul');
+let slides3 = slideContainer3.querySelectorAll('.ds');
+let currentIdx3 = 0;
+let slideCount3 = slides3.length;
+const slideWidth3 = 357;
+const slideMargin3 = 42;
+const moveAmt3 = slideWidth3 + slideMargin3;
+const slideToShow3 = 2;
+const prevBtn3 = slideWrapper3.querySelector('.prev_ds');
+const nextBtn3 = slideWrapper3.querySelector('.next_ds');
+let timer3;
+
+//복사본 생성
+//슬라이드 요소를 복사해 뒤에 추가
+for(let slide3 of slides3){
+  let slideClone3 = slide3.cloneNode(true);
+  slideContainer3.appendChild(slideClone3);
+}
+//슬라이드 요소를 복사해 앞에 추가
+for(let iii = 3;iii>=0;iii--){
+  let slideClone3 = slides3[iii].cloneNode(true);
+  slideContainer3.prepend(slideClone3);
+}
+
+//slideContainer3의 너비를 지정
+slides3 = slideContainer3.querySelectorAll('.ds');
+let newslideCount3 = slides3.length;
+
+//슬라이드 중앙 배치
+slideContainer3.style.width = slideWidth3*newslideCount3+slideMargin3 *(newslideCount3-1)+'px';
+slideContainer3.style.transform = `translateX(${moveAmt3*-slideCount3}px)`;
+
+//이동함수
+function moveSlide3(idx3){
+  slideContainer3.style.left = `${-idx3*moveAmt3}px`;
+  currentIdx3 = idx3;
+
+  if(currentIdx3 == -slideCount3 || currentIdx3 == slideCount3){
+    setTimeout(()=>{
+      slideContainer3.classList.remove('animated');
+      slideContainer3.style.left = 0;
+    },500);
+    setTimeout(()=>{
+      slideContainer3.classList.add('animated');
+    },550);
+
+    currentIdx3 = 0;
+  }
+  console.log(currentIdx3);
+}
+prevBtn3.addEventListener('click',debounce3(()=>{
+  moveSlide3(currentIdx3-1);
+},500));
+nextBtn3.addEventListener('click',debounce3(()=>{
+  moveSlide3(currentIdx3+1); 
+},500));
+
+//debounce 
+
+function debounce3(callback3, time3){
+  console.log(typeof(callback3));
+  let slideTrigger3 = true;
+  console.log(slideTrigger3);
+  return ()=>{
+    if(slideTrigger3){
+      callback3();
+      slideTrigger3 = false;
+      setTimeout(()=>{
+        slideTrigger3 = true;
+      },time3);
+    }
+    console.log(slideTrigger3);
+  }
+  console.log(slideTrigger3);
+}
+
+
+function autoSlide3(){
+  timer = setInterval(()=>{
+    moveSlide3(currentIdx3+1); 
+  }, 4000);
+}
 
 
 
@@ -592,7 +592,7 @@ function getListItem(index, places) {
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, idx, title) {
   var imageSrc = '../img/marker.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
-    imageSize = new kakao.maps.Size(36, 55), // 마커 이미지의 크기
+    imageSize = new kakao.maps.Size(36, 45), // 마커 이미지의 크기
     imgOptions = {
       spriteSize: new kakao.maps.Size(36, 725), // 스프라이트 이미지의 크기
       spriteOrigin: new kakao.maps.Point(0, (idx * 46) + 10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
