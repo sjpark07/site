@@ -1,12 +1,12 @@
 //header - nav menu
-const mainMenu = document.querySelectorAll('nav > .top_menu > ul > li');
+const mainMenu = document.querySelectorAll('nav > .top_menu > .menu');
 const header = document.querySelector('header');
 const initHeight = header.offsetHeight;
 let tallestHeight = 0;
 
 for(let mm of mainMenu){
 	//서브메뉴의 높이구하기
-	let smHeight = mm.querySelector('ul').offsetHeight;	
+	let smHeight = mm.querySelector('.menu > li').offsetHeight;	
 
 	if(smHeight > tallestHeight){
 		tallestHeight = smHeight;
@@ -29,7 +29,6 @@ document.addEventListener("scroll", () => {
    } else {
     herder.classList.remove("fixed");
    }
-   console.log(window.scrollY);
 });
 
 //fix image animation
@@ -40,7 +39,6 @@ document.addEventListener("scroll", () => {
    } else {
     fix_img1.classList.remove("animated1");
    }
-   console.log(window.scrollY);
 });
 
 const fix_img2 = document.querySelector(".fix_img2");
@@ -50,7 +48,6 @@ document.addEventListener("scroll", () => {
    } else {
     fix_img2.classList.remove("animated2");
    }
-   console.log(window.scrollY);
 });
 
 const fix_img3 = document.querySelector(".fix_img3");
@@ -60,7 +57,6 @@ document.addEventListener("scroll", () => {
    } else {
     fix_img3.classList.remove("animated3");
    }
-   console.log(window.scrollY);
 });
 
 const fix_img4 = document.querySelector(".fix_img4");
@@ -70,7 +66,6 @@ document.addEventListener("scroll", () => {
    } else {
     fix_img4.classList.remove("animated4");
    }
-   console.log(window.scrollY);
 });
 //event slide
 const slideWrapper = document.querySelector('.slide_wrapper');
@@ -124,17 +119,7 @@ function moveSlide(idx){
   }
   console.log(currentIdx);
 }
-//이전 버튼으로 이동하기
-/*
-prevBtn.addEventListener('click',()=>{  
-  moveSlide(currentIdx-1); 
-});
 
-//다음 버튼으로 이동하기
-nextBtn.addEventListener('click',()=>{  
-  moveSlide(currentIdx+1); 
-});
-*/
 prevBtn.addEventListener('click',debounce(()=>{
   moveSlide(currentIdx-1);
 },500));
@@ -223,25 +208,74 @@ slideContainer.addEventListener('mouseup',(e)=>{
     }
   }
 });
+////recommend icon
+
+
+const tabMenu = document.querySelectorAll('.be_menu_s');
+const tabContent = document.querySelectorAll('.slides_be ul');
+
+// tabMenu.forEach((item, index)=>{
+//   item.addEventListener('click',(e)=>{
+//     e.preventDefault();
+
+//     for(let m of tabMenu){
+//       m.classList.remove('highLight');
+//     }
+//     e.target.classList.add('highLight');
+
+//     for(let tc of tabContent){
+//       tc.classList.remove('highLight');
+//     }
+//     tabContent[index].classList.add('highLight');
+//   })
+// })
+function showContent(num){
+  tabContent.forEach(function(item){
+    item.style.display = 'none';
+  });
+  
+  tabContent[num].style.display = 'flex';
+}
+  showContent(0);
+
+tabMenu.forEach(function(item, idx){
+     item.addEventListener('click',(e)=>{
+e.preventDefault();
+    showContent(idx);
+    tabMenu[idx].style.backgroundColor = 'white';
+    e.target[idx].style.backgroundColor = 'yellow';
+     })})
+
+
+
+
+//     })});
+
+    // document.addEventListener("scroll", () => {
+    //   if (window.scrollY > 896) {
+    //     fix_img1.classList.add("animated1");
+    //    } else {
+    //     fix_img1.classList.remove("animated1");
+    //    }
+    // });
 
 //recommend slide
-
 //beverage
 const slideWrapper2 = document.querySelector('.slide_wrapper_be');
-const slideContainer2 = slideWrapper2.querySelector('.slides_be');
-let slides2 = slideContainer2.querySelectorAll('.be');
+const slideContainer2 = slideWrapper2.querySelector('.slides_be ul');
+let slides2 = slideContainer2.querySelectorAll('.slides_be ul li');
 let currentIdx2 = 0;
 let slideCount2 = slides2.length;
-const slideWidth2 = 350;
-const slideMargin2 = 30;
+const slideWidth2 = 357;
+const slideMargin2 = 42;
 const moveAmt2 = slideWidth2 + slideMargin2;
 const slideToShow2 = 2;
 const prevBtn2 = slideWrapper2.querySelector('.prev_be');
 const nextBtn2 = slideWrapper2.querySelector('.next_be');
 let timer2;
 
-//복사본 생성
-//슬라이드 요소를 복사해 뒤에 추가
+// //복사본 생성
+// //슬라이드 요소를 복사해 뒤에 추가
 for(let slide2 of slides2){
   let slideClone2 = slide2.cloneNode(true);
   slideContainer2.appendChild(slideClone2);
@@ -249,11 +283,10 @@ for(let slide2 of slides2){
 //슬라이드 요소를 복사해 앞에 추가
 for(let ii = 3;ii>=0;ii--){
   let slideClone2 = slides2[ii].cloneNode(true);
-  slideContainer2.prepend(slideClone2);
-}
+  slideContainer2.prepend(slideClone2);}
 
 //slideContainer2의 너비를 지정
-slides2 = slideContainer2.querySelectorAll('.be');
+slides2 = slideContainer2.querySelectorAll('.slides_be ul li');
 let newslideCount2 = slides2.length;
 
 //슬라이드 중앙 배치
@@ -262,7 +295,6 @@ slideContainer2.style.transform = `translateX(${moveAmt2*-slideCount2}px)`;
 
 //이동함수
 function moveSlide2(idx2){
-  console.log('작동');
   slideContainer2.style.left = `${-idx2*moveAmt2}px`;
   currentIdx2 = idx2;
 
@@ -279,17 +311,8 @@ function moveSlide2(idx2){
   }
   console.log(currentIdx2);
 }
-//이전 버튼으로 이동하기
-/*
-prevBtn.addEventListener('click',()=>{  
-  moveSlide2(currentIdx2-1); 
-});
 
-//다음 버튼으로 이동하기
-nextBtn.addEventListener('click',()=>{  
-  moveSlide2(currentIdx2+1); 
-});
-*/
+
 prevBtn2.addEventListener('click',debounce2(()=>{
   moveSlide2(currentIdx2-1);
 },500));
@@ -316,16 +339,7 @@ function debounce2(callback2, time2){
   console.log(slideTrigger2);
 }
 
-// window.addEventListener('keydown', (ee) => {
-//   debounce2(() => {
-//     if (ee.key === 'ArrowRight') {
-//       moveSlide2(currentIdx2 + 1); 
-//     }
-//     if (ee.key === 'ArrowLeft') {
-//       moveSlide2(currentIdx2 - 1); 
-//     }
-//   }, 500)();
-// });
+
 
 function autoSlide2(){
   timer = setInterval(()=>{
@@ -333,61 +347,16 @@ function autoSlide2(){
   }, 4000);
 }
 
-// //ul에 마우스가 들어오면 멈추기, 나가면 다시 시작
-// slideContainer2.addEventListener('mouseenter',()=>{
-//   clearInterval(timer2);
-// });
-// slideContainer2.addEventListener('mouseleave',()=>{
-//   autoSlide2();
-// });
-// let xAxis2 = {
-//   downX:0,
-//   upX:0
-// }
-// let yAxis2 = {
-//   downY:0,
-//   upY:0
-// }
-
-// slideContainer2.addEventListener('mousedown',(ee)=>{
-//   xAxis2.downX = ee.clientX;
-//   yAxis2.downY = ee.clientY;
-// });
-// slideContainer2.addEventListener('mouseup',(ee)=>{
-//   xAxis.upX = ee.clientX;
-//   yAxis.upY = ee.clientY;
-//   let differenceX;
-//   let differenceY;
-
-//   differenceX = Math.abs(xAxis.downX - xAxis.upX);
-//   differenceY = Math.abs(yAxis.downY - yAxis.upY);
-
-//   if(differenceX > differenceY){
-//     if(xAxis.upX >= xAxis.downX){//swipe to right
-//       console.log('right');
-//       moveSlide(currentIdx2 - 1); 
-//     } else{//swipe to left
-//       console.log('left');
-//       moveSlide(currentIdx2 + 1); 
-//     }
-//   } else{
-//     if(yAxis.upY >= yAxis.downY){//swipe to bottom
-//       console.log('bottom');
-//     }else{//swipe to top
-//       console.log('top');
-//     }
-//   }
-// });
 
 
 //dessert
 const slideWrapper3 = document.querySelector('.slide_wrapper_ds');
-const slideContainer3 = slideWrapper3.querySelector('.slides_ds');
+const slideContainer3 = slideWrapper3.querySelector('.slides_ds>ul');
 let slides3 = slideContainer3.querySelectorAll('.ds');
 let currentIdx3 = 0;
 let slideCount3 = slides3.length;
-const slideWidth3 = 350;
-const slideMargin3 = 30;
+const slideWidth3 = 357;
+const slideMargin3 = 42;
 const moveAmt3 = slideWidth3 + slideMargin3;
 const slideToShow3 = 2;
 const prevBtn3 = slideWrapper3.querySelector('.prev_ds');
@@ -432,17 +401,6 @@ function moveSlide3(idx3){
   }
   console.log(currentIdx3);
 }
-//이전 버튼으로 이동하기
-/*
-prevBtn.addEventListener('click',()=>{  
-  moveSlide(currentIdx3-1); 
-});
-
-//다음 버튼으로 이동하기
-nextBtn.addEventListener('click',()=>{  
-  moveSlide(currentIdx3+1); 
-});
-*/
 prevBtn3.addEventListener('click',debounce3(()=>{
   moveSlide3(currentIdx3-1);
 },500));
@@ -469,73 +427,12 @@ function debounce3(callback3, time3){
   console.log(slideTrigger3);
 }
 
-// window.addEventListener('keydown', (eee) => {
-//   debounce3(() => {
-//     if (eee.key === 'ArrowRight') {
-//       moveSlide3(currentIdx3 + 1); 
-//     }
-//     if (eee.key === 'ArrowLeft') {
-//       moveSlide3(currentIdx3 - 1); 
-//     }
-//   }, 500)();
-// });
 
 function autoSlide3(){
   timer = setInterval(()=>{
     moveSlide3(currentIdx3+1); 
   }, 4000);
 }
-
-// //ul에 마우스가 들어오면 멈추기, 나가면 다시 시작
-// slideContainer3.addEventListener('mouseenter',()=>{
-//   clearInterval(timer3);
-// });
-// slideContainer3.addEventListener('mouseleave',()=>{
-//   autoSlide3();
-// });
-// let xAxis = {
-//   downX:0,
-//   upX:0
-// }
-// let yAxis = {
-//   downY:0,
-//   upY:0
-// }
-
-// slideContainer2.addEventListener('mousedown',(e)=>{
-//   xAxis.downX = e.clientX;
-//   yAxis.downY = e.clientY;
-// });
-// slideContainer2.addEventListener('mouseup',(e)=>{
-//   xAxis.upX = e.clientX;
-//   yAxis.upY = e.clientY;
-//   let differenceX;
-//   let differenceY;
-
-//   differenceX = Math.abs(xAxis.downX - xAxis.upX);
-//   differenceY = Math.abs(yAxis.downY - yAxis.upY);
-
-//   if(differenceX > differenceY){
-//     if(xAxis.upX >= xAxis.downX){//swipe to right
-//       console.log('right');
-//       moveSlide(currentIdx2 - 1); 
-//     } else{//swipe to left
-//       console.log('left');
-//       moveSlide(currentIdx2 + 1); 
-//     }
-//   } else{
-//     if(yAxis.upY >= yAxis.downY){//swipe to bottom
-//       console.log('bottom');
-//     }else{//swipe to top
-//       console.log('top');
-//     }
-//   }
-// });
-
-
-
-
-
 
 
 
@@ -546,7 +443,7 @@ var markers = [];
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 2 // 지도의 확대 레벨
+        level: 5 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
