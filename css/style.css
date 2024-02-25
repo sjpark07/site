@@ -86,7 +86,7 @@ main .fix_img3 {
 
 main .fix_img4 {
     position: absolute;
-    transform: translate(-80px, 3415px) rotate(-5.17deg) scaleX(-1);
+    transform: translate(-80px, 3500px) rotate(-5.17deg) scaleX(-1);
     object-fit: cover;
     z-index: 500;
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
@@ -165,13 +165,13 @@ main .fix_img4 {
 
 @keyframes move4 {
     from {
-        transform: translateY(3450px) scaleX(-1);
+        transform: translateY(3500px) scaleX(-1);
         left: -80px;
 
     }
 
     to {
-        transform: translateY(3500px) scaleX(-1);
+        transform: translateY(3550px) scaleX(-1);
         left: -80px;
 
     }
@@ -488,10 +488,10 @@ header .fixed {
     filter: drop-shadow(0px 2px 2px rgba(142, 137, 16, 0.1));
 }
 
-.be_menu_s:active,
+/* .be_menu_s:active,
 .ds_menu_s:active {
     background-color: #009900;
-}
+} */
 
 .ds a,
 .be a {
@@ -565,17 +565,28 @@ header .fixed {
     border-radius: 50px;
 }
 
-.be_menu_s img,
-.ds_menu_s img {
+.be_menu_s a img,
+.ds_menu_s a img {
     object-fit: cover;
 
 
 }
 
-.be_menu_s:hover,
-.ds_menu_s:hover {
+.be_menu_s a *.bem_desc, 
+.ds_menu_s a *.dsm_desc {
+    font-size: var(--font-size15);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+
+
+}
+.be_menu_s:hover .be_menu_s a img,
+.ds_menu_s:hover .ds_menu_s a img{
     background: rgba(0, 0, 0, 1);
     transition: 0.3s;
+    display: none;
 
 }
    
