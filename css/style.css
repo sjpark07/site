@@ -594,6 +594,15 @@ header .fixed {
 
 /*FRANCHISE*/
 
+        .video-container {
+            width: 86%;
+            margin: 0 auto;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
 /*MAP*/
 .map_wrap,
@@ -798,8 +807,6 @@ footer{
 
 .footer_l{
     grid-area:fl;
-    left:0;
-    bottom:0;
     background-image: url(../img/footerl.png);
     background-size: cover;
     
@@ -807,8 +814,7 @@ footer{
 }
 .footer_r{
     grid-area:fr;
-    right:0;
-    bottom:0;
+    margin-top:5px;
     background-image: url(../img/footerr.png);
     background-size: cover;
 }
