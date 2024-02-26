@@ -592,7 +592,7 @@ function getListItem(index, places) {
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 function addMarker(position, idx, title) {
   var imageSrc = '../img/marker.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
-    imageSize = new kakao.maps.Size(36, 45), // 마커 이미지의 크기
+    imageSize = new kakao.maps.Size(36, 55), // 마커 이미지의 크기
     imgOptions = {
       spriteSize: new kakao.maps.Size(36, 725), // 스프라이트 이미지의 크기
       spriteOrigin: new kakao.maps.Point(0, (idx * 46) + 10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
